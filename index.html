@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Tax Calculator</title>
+  <style>
+    :root {
+      --primary-color: #28a745;
+      --secondary-color: #218838;
+      --accent-color: #20c997;
+      --light-color: #f8f9fa;
+      --dark-color: #212529;
+      --text-light: #f8f9fa;
+      --text-dark: #212529;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      --transition: all 0.3s ease;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--dark-color);
+      color: var(--text-light);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    .calculator {
+      background-color: #343a40;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      padding: 2rem;
+      width: 100%;
+      max-width: 500px;
+      transition: var(--transition);
+    }
+    
+    .calculator:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1 {
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+      font-weight: 500;
+    }
+    
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #495057;
+      border-radius: var(--border-radius);
+      background-color: var(--dark-color);
+      color: var(--text-light);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    
+    input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+    }
+    
+    .btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+    
+    .result {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background-color: #495057;
+      border-radius: var(--border-radius);
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #6c757d;
+    }
+    
+    .result-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .result-label {
+      font-weight: 500;
+      color: var(--accent-color);
+    }
+    
+    .result-value {
+      font-weight: 700;
+      color: var(--text-light);
+    }
+    
+    .tax-amount {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #6c757d;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Tax Calculator</h1>
+    
+    <div class="input-group">
+      <label for="salary">Enter Your Annual Salary </label>
+      <input type="number" id="salary" placeholder="e.g. 750000" min="0" step="1000">
+    </div>
+    
+    <button class="btn" onclick="calculateTax()">Calculate Tax</button>
+    
+    <div id="result" class="result">
+      <div class="result-item">
+        <span class="result-label">Annual Salary:</span>
+        <span class="result-value" id="annual-salary">0</span>
+      </div>
+      
+      <div class="result-item">
+        <span class="result-label">Tax Rate:</span>
+        <span class="result-value" id="tax-rate">0%</span>
+      </div>
+      
+      <div class="result-item">
+        <span class="result-label">Tax Amount:</span>
+        <span class="result-value tax-amount" id="tax-amount">0</span>
+      </div>
+      
+      <div class="result-item">
+        <span class="result-label">After-Tax Income:</span>
+        <span class="result-value" id="after-tax">0</span>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>SMIT-Batch16 Class - 08</p>
+    </div>
+  </div>
+
+ <script src="app.js"></script>
+</body>
+</html>
