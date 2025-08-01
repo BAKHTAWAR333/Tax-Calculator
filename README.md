@@ -1,6 +1,3 @@
-# Tax-CalculatorHere is a fully professional version of your **Tax Calculator** project `README.md` section, including a **Live Demo** link section. You can customize the link later with your actual deployment URL (e.g., GitHub Pages, Vercel, or Netlify):
-
----
 
 # 💸 Tax Calculator
 
