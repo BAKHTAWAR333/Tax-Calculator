@@ -8,7 +8,7 @@ A sleek and interactive **Tax Calculator** built using **HTML**, **CSS**, and **
 ## 🔗 Live Demo
 
 🌐 **Try it now**: [Live Tax Calculator](https://bakhtawar333.github.io/Tax-Calculator/)
-*(Replace with your deployed URL, e.g., GitHub Pages, Netlify, or Vercel)*
+
 
 ---
 
