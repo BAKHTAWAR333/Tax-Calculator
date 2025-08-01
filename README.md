@@ -19,7 +19,7 @@ A sleek and interactive **Tax Calculator** built using **HTML**, **CSS**, and **
 * ✅ **Dynamic Tax Calculation** – Based on the following salary brackets:
 
   * 🟢 **0% Tax** for income ≤ 50,000
-  * 🟡 **1% Tax** for ₹50,001 – 100,000
+  * 🟡 **1% Tax** for 50,001 – 100,000
   * 🔴 **5% Tax** for income > 100,000
 * ✅ **Real-Time Output** – Tax updates instantly as you type
 * ✅ **Smooth Animations** – Enhanced UX with transitions
